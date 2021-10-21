@@ -1,0 +1,605 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+.thumb{
+	display: block;
+}
+.thumb img{
+	display: block;
+	width:100%;
+}
+p{
+	line-height:1.6em;
+	font-size: 16px;
+	font-family: 'Gordita Regular';
+}
+.hidden{
+	display:none;
+}
+br.clear {
+	clear: both;
+	line-height: 0;
+}
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+:root {
+  --orange-color: #e95e25;
+  --rose-color: #A14D9B;
+  --grey-color: #5B5A5D;
+  --main-bg-color: #141414;
+}
+@font-face {
+    font-family: 'Gordita Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gordita Medium'), url('../fonts/Gordita Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gordita Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gordita Regular'), url('../fonts/Gordita Regular.woff') format('woff');
+}
+body {
+	font-size: 17px;
+	overflow-x: hidden;
+	min-width: 320px;
+    color: var(--grey-color);
+    background: #141414;
+    padding-left: 30px;
+    font-family: 'Gordita Regular';
+    animation-name: main;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+}
+@keyframes main {
+    0% {
+        opacity: 0.1;
+        display:none;
+    }
+    15% {
+        display:none;
+    }
+    30% {
+        position: relative;
+        top: -40px;
+    }
+    45% {
+        position: relative;
+        top: -30px;
+    }
+    60% {
+        position: relative;
+        top: -20px;
+    }
+    75% {
+        position: relative;
+        top: -10px;
+    }
+    90% {
+        position: relative;
+        top: -5px;
+    }
+    100% {
+        position: relative;
+        top: 0px;
+    }
+}
+header {
+    margin-top: 24px;
+}
+header section.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    width: 200px;
+}
+header h1 a {
+    display: block;
+}
+header h1 a img {
+    width: 100%;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+header nav ul li {
+    margin-right: 32px;
+}
+header nav ul li a {
+    letter-spacing: 0.16px;
+    color: #aaaaaa;
+    font-size: 14px;
+    font-family: 'Gordita Regular';
+}
+header nav ul li a.button {
+    padding: 10px 24px;
+    border-radius: 5px;
+    border: 1px solid;
+    color: var(--orange-color);
+    border-color: linear-gradient(to right, #e95e25, #A14D9B);
+}
+header nav ul li a:hover {
+    color: #fff;
+}
+header nav ul li a.button:hover {
+    color: #A14D9B;
+}
+#spotlight {
+    padding-top: 50px;
+    /* padding-bottom: 100px; */
+}
+#spotlight section.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#spotlight section.left {
+    width: 50%;
+}
+#spotlight section.left h1 {
+    font-size: 50px;
+    font-family: 'Gordita Medium';
+    color: #fff;
+    margin-bottom: 24px;
+}
+#spotlight section.left h1 b {
+    color: var(--orange-color);
+}
+#spotlight section.left p  {
+    font-size: 20px;
+    width: 80%;
+    color: #aaaaaa;
+    margin-bottom: 42px;
+}
+#spotlight section.left div.button {
+    display: inline-block;
+    text-align: center;
+    background: linear-gradient(to right, #e95e25, #A14D9B);
+    padding: 12px 24px;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+#spotlight section.left div.button span {
+    color: #fff;
+    opacity: 0.63;
+    font-family: 'Gordita Regular';
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+#spotlight section.left div.button a {
+    color: #fff;
+    font-family: 'Gordita medium';
+    font-size: 14px;
+    display: block;
+}
+#spotlight section.left div.button:hover {
+    opacity: 1;
+}
+#spotlight section.right {
+    width: 50%;
+}
+#spotlight section.right img {
+    width: 90%;
+    position: relative;
+    left: 100px;
+}
+#spotlight section.right img.bg {
+    position: absolute;
+    width: 150px;
+    filter: blur(50px);
+}
+#spotlight section.right img.bg.one {
+    top: 185px;
+    left: 1100px;
+}
+#spotlight section.right img.bg.two {
+    top: 430px;
+    left: 730px;
+}
+#awards {
+    padding-top: 80px;
+    margin-bottom: 100px;
+}
+#awards section.wrapper {
+    margin: 0 auto;
+}
+#awards ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#awards ul li {
+    width: 25%;
+    border: 0.3px solid;
+    border-color: rgba(233, 94, 37, 0.3);
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 20px;
+}
+#awards ul li:hover {
+    background: linear-gradient(to bottom, #D45945, #9A4CA8);
+    transform: scaley(1.1);
+    color: #fff;
+    transition: 0.3s;
+}
+#awards ul li:last-child {
+    margin-right: 0;
+}
+#awards ul li section.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 42px;
+}
+#awards ul li section.top div.box {
+    background: #262626;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+}
+#awards ul li section.top img.icon {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#awards ul li section.top span.date {
+    font-size: 12px;
+    font-family: 'Gordita medium';
+}
+#awards ul li section.middle {
+    margin-bottom: 24px;
+}
+#awards ul li section.middle span {
+    font-size: 12px;
+    font-family: 'Gordita medium';
+}
+#awards ul li section.middle h3 {
+    margin-top: 18px;
+    font-size: 18px;
+    font-family: 'Gordita medium';
+    line-height: 32px;
+    color: #fff;
+    margin-bottom: 24px;
+}
+#awards ul li section.middle img.graph {
+    width: 15%;
+}
+#awards ul li section.bottom {
+    display: flex;
+    justify-content: space-between;align-items: center;
+}
+#awards ul li section.bottom h6 {
+    font-size: 12px;
+    font-family: 'Gordita medium';
+    color: #fff;
+}
+#awards ul li section.bottom img.arrow {
+    width: 10%;
+}
+#news {
+    padding-top: 50px;
+    margin-bottom: 80px;
+}
+#news section.wrapper {
+    position: relative;
+}
+#news section.background {
+    width: 100%;
+    position: relative;
+}
+#news section.background img.background_image {
+    width: 100%;
+}
+#news section.background div.background_gradient {
+    width: 100%;
+    height: 100%;
+    opacity: 0.59;
+    border-radius: 20px;
+    background: linear-gradient(to left, #FF6300 0%, #000 100%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#news section.content {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0%, -50%);
+}
+#news section.content h2 {
+    font-size: 48px;
+    font-family: 'Gordita medium';
+    color: #fff;
+    margin-bottom: 24px;
+}
+#news section.content p {
+    width: 75%;
+    font-size: 18px;
+    font-family: 'Gordita Regular';
+    color: #fff;
+    margin-bottom: 24px;
+}
+#news section.content div.mail {
+    margin-top: 35px;
+}
+#news section.content div.mail span {
+    font-size: 12px;
+    background: #fff;
+    padding: 18px 120px 18px 12px;
+    border-radius: 10px;
+}
+#news section.content div.mail a.button {
+    font-size: 12px;
+    padding: 18px 32px;
+    border-radius: 10px;
+    color: #fff;
+    background: linear-gradient(to right, #FF6300, #9A4CA8);
+    margin-left: -20px;
+}
+#news section.content div.mail a.button:hover {
+    transition: 0.3s;
+    padding: 18px 34px;
+}
+footer {
+    margin-bottom: 40px;
+}
+footer section.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer section.left {
+    width: 20%;
+}
+footer section.left img.logo {
+    width: 80%;
+    margin-bottom: 12px;
+}
+footer section.left p {
+    font-size: 14px;
+}
+footer nav ul {
+    display: flex;
+    align-items: center;
+}
+footer nav ul li {
+    margin-right: 30px;
+}
+footer nav ul li:last-child {
+    margin-right: 0;
+}
+footer nav ul li a {
+    letter-spacing: 0.16px;
+    color: #aaaaaa;
+    font-size: 14px;
+    font-family: 'Gordita Regular';
+}
+footer nav ul li div.vl {
+    width: 2px;
+    height: 40px;
+    background: #aaa;
+}
+footer nav ul li p {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+footer nav ul li p a.link {
+    font-size: 14px;
+    color: #ff6300;
+    /* font-family: 'Gordita medium'; */
+}
+footer nav ul li a:hover {
+    color: #fff;
+}
+footer nav ul li p a.link:hover {
+    color: #fff;
+}
+
+@media all and (max-width: 1280px) {
+    #spotlight section.left h1 {
+        font-size: 46px;
+    }
+    #spotlight section.left p  {
+        font-size: 16px;
+    }
+    #spotlight section.right img.bg {
+        display: none;
+    }
+    #news section.content {
+        width: 90%;
+}
+@media all and (max-width: 980px) {
+    header h1 {
+        margin: 0 auto;
+    }
+    header nav ul {
+        display: none;
+    }
+    #spotlight section.right {
+        display: none;
+    }
+    #spotlight section.left {
+        width: 90%;
+        text-align: center;
+    }
+    #spotlight section.left p {
+        margin: 0 auto;
+        margin-bottom: 24px;
+    }
+    #awards ul {
+        flex-wrap: wrap;
+    }
+    #awards ul li {
+        width: 48%;
+        margin-bottom: 24px;
+        margin-right: 0;
+    }
+    #news {
+        margin-bottom: 0;
+    }
+    #news section.wrapper {
+        display: inline-block;
+    }
+    #news section.background img.background_image {
+        display: none;
+    }
+    #news section.background div.background_gradient {
+        display: none;
+    }
+    #news section.content {
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+        margin-top: 80px;
+        padding: 24px;
+        padding-bottom: 80px;
+        background: linear-gradient(to left, rgba(255, 99, 0, 0.5), rgba(154, 76, 168, 0.5));
+        border-radius: 20px;
+    }
+    #news section.content h2 {
+        font-size: 42px;
+    }
+    #news section.content p {
+        margin: 0 auto;
+        margin-bottom: 24px;
+        font-size: 14px;
+    }
+    footer section.wrapper {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    footer section.left {
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    footer section.left img.logo {
+        width: 50%;
+    }
+    footer nav ul {
+        margin: 0 auto;
+    }
+}
+@media all and (max-width: 768px) {
+    footer nav ul {
+        width: 67%;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        text-align: center;
+    }
+    footer nav ul li div.vl {
+        display: none;
+    }
+    footer nav ul li p {
+        display: inline;
+        margin-top: 24px;
+        margin-left: 40px;
+    }
+}
+@media all and (max-width: 640px) {
+    #spotlight section.left p {
+        width: 90%;
+    }
+    #news {
+        padding-top: 100px;
+    }
+    #news section.content div.mail span {
+        margin-bottom: 40px;
+        padding: 18px 80px;
+    }
+    #news section.content div.mail a.button {
+        display: inline-block;
+        margin-top: 24px;
+        margin-left: 0;
+    }
+    footer section.left img.logo {
+        width: 80%;
+    }
+    footer section.left {
+        width: 100%;
+    }
+    footer nav ul {
+        width: 90%;
+    }
+}
+@media all and (max-width: 480px) {
+    #spotlight section.left h1 {
+        font-size: 38px;
+    }
+    #awards ul {
+        margin: 0 auto;
+    }
+    #awards ul li {
+        width: 90%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    #news {
+        padding-top: 150px;
+        display: block;
+    }
+    #news section.content {
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+    #news section.content h2 {
+        font-size: 24px;
+    }
+    #news section.content p {
+        font-size: 14px;
+    }
+    #news section.content div.mail span {
+        padding: 12px 42px;
+    }
+    footer nav {
+        margin: 0 auto;
+    }
+    footer nav ul {
+        width: 100%;
+        display: block;
+        margin: 0;
+    }
+    footer nav ul li {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 12px;
+    }
+    footer nav ul li p {
+        margin-left: 0;
+    }
+}
+@media all and (max-width: 360px) {
+    #news section.content div.mail span {
+        padding: 12px 30px;
+    }
+    #news section.content div.mail a.button {
+        padding: 12px 20px;
+    }
+}
